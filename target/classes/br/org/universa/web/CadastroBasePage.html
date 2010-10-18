@@ -1,0 +1,40 @@
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" >
+    <head>  
+        <title>Cadastro</title>
+    </head>
+    <body>
+        <strong>Cadatro de Base de Conhecimento</strong>
+        <br/><br/>
+        <form wicket:id="form">
+	        <table>
+	        	<tr>
+		        	<th>T&iacute;tulo</th>
+		        	<td><input wicket:id="titulo" type="text"/></td>
+	        	</tr>
+	        	
+	        	<tr>
+	        		<th>Categoria</th>
+	        		<td><select wicket:id="categoria"></select></td>
+	        	</tr>
+	        	
+	        	<tr>
+	        	<table>
+	        		<tr>
+	        			<th>Nome</th>
+	        			<td><input wicket:id="nome" type="text"/></td>
+	        			<td>&nbsp;</td>
+	        			<th>Vers&atilde;o</th>
+	        			<td><input wicket:id="versao" type="text"/></td>
+	        		</tr>
+				</table>
+				</tr>	        	
+	        	
+	        	<tr>
+	        		<td><input wicket:id="cadastra" type="submit"/></td>
+	        	</tr>
+	        </table>	
+        </form>
+
+        <!--  <span wicket:id="message">message will be here</span>-->
+    </body>
+</html>

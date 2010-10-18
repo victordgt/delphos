@@ -8,33 +8,41 @@
         <form wicket:id="form">
 	        <table>
 	        	<tr>
-		        	<th>T&iacute;tulo</th>
+		        	<th align="left">T&iacute;tulo</th>
 		        	<td><input wicket:id="titulo" type="text"/></td>
 	        	</tr>
 	        	
 	        	<tr>
-	        		<th>Categoria</th>
+	        		<th align="left">Categoria</th>
 	        		<td><select wicket:id="categoria"></select></td>
 	        	</tr>
 	        	
 	        	<tr>
-	        	<table>
-	        		<tr>
-	        			<th>Nome</th>
-	        			<td><input wicket:id="nome" type="text"/></td>
-	        			<td>&nbsp;</td>
-	        			<th>Vers&atilde;o</th>
-	        			<td><input wicket:id="versao" type="text"/></td>
-	        		</tr>
-				</table>
+	        		<th align="left">Nome</th>
+	        		<td><input wicket:id="nome" type="text"/></td>
 				</tr>	        	
+				
+				<tr>
+					<th align="left">Vers&atilde;o</th>
+					<td><input wicket:id="versao" type="text"/></td>
+				</tr>
+
+	        	<tr>
+		        	<th align="left">Descri&ccedil;&atilde;o</th>
+		        	<td><input wicket:id="descricao" type="text"/></td>
+	        	</tr>
+	        	
+	        	<tr>
+		        	<th align="left">Solu&ccedil;&atilde;o</th>
+		        	<td><input wicket:id="solucao" type="text"/></td>
+	        	</tr>	        	
 	        	
 	        	<tr>
 	        		<td><input wicket:id="cadastra" type="submit"/></td>
+	        		<td>&nbsp;</td>
 	        	</tr>
 	        </table>	
         </form>
 
-        <!--  <span wicket:id="message">message will be here</span>-->
     </body>
 </html>

@@ -31,28 +31,6 @@ public class CadastroBasePage extends WebPage {
 	 */
 	@SuppressWarnings("serial")
 	public CadastroBasePage(final PageParameters parameters) {
-
-/*		Form<Object> form = new Form<Object>("form");
-		add(form);
-
-		form.add(new TextField<Integer>("codigo", new PropertyModel<Integer>(this, "cliente.codigo")));
-		form.add(new TextField<String>("nome", new PropertyModel<String>(this, "cliente.nome")));
-		form.add(new TextField<String>("endereco", new PropertyModel<String>(this, "cliente.endereco")));
-		form.add(new TextField<String>("telefone", new PropertyModel<String>(this, "cliente.telefone")));
-
-		form.add(new Button("btnConfirmar") {
-			public void onSubmit() {
-		       System.out.println(cliente);
-		       setResponsePage(CadastroClienteRespostaPage.class);
-			}
-		}
-		);
-		
-		form.add(new Button("btnCancelar") {
-			public void onSubmit() {
-
-			}
-		});*/
 		
      	Form<Object> form = new Form<Object>("form");
     	form.add(new TextField<String>("titulo", new PropertyModel<String>(this,"cadastroBase.titulo")));
@@ -62,6 +40,9 @@ public class CadastroBasePage extends WebPage {
     	
     	form.add(new TextField<String>("nome", new PropertyModel<String>(this,"cadastroBase.nome")));
     	form.add(new TextField<String>("versao", new PropertyModel<String>(this,"cadastroBase.versao")));
+    	form.add(new TextField<String>("descricao", new PropertyModel<String>(this, "cadastroBase.descricao")));
+    	form.add(new TextField<String>("solucao", new PropertyModel<String>(this, "cadastroBase.solucao")));
+    	
     	
     	form.add(new Button("cadastra") {
     		@Override

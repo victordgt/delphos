@@ -9,6 +9,8 @@ public class CadastroBase implements Serializable {
 	private String categoria;
 	private String nome;
 	private String versao;
+	private String descricao;
+	private String solucao;
 
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
@@ -40,5 +42,21 @@ public class CadastroBase implements Serializable {
 
 	public String getVersao() {
 		return versao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setSolucao(String solucao) {
+		this.solucao = solucao;
+	}
+
+	public String getSolucao() {
+		return solucao;
 	}
 }

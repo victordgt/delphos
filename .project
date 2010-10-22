@@ -1,5 +1,5 @@
 <projectDescription>
-  <name>wicket-gae-template</name>
+  <name>delphos</name>
   <comment>This project is a template for building Wicket-based web applications that run on
         Google App Engine, using Google Guice for dependency injection. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
   <projects/>

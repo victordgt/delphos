@@ -1,0 +1,72 @@
+<testng-results>
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite">
+    <groups>
+    </groups>
+    <test name="Command line test">
+      <class name="com.example.service.JdoGreetingPersistenceTest">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="36" started-at="2010-10-22T03:21:07Z" finished-at="2010-10-22T03:21:07Z">
+        </test-method>
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-10-22T03:21:07Z" finished-at="2010-10-22T03:21:07Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDownAppEngine()" name="tearDownAppEngine" is-config="true" duration-ms="0" started-at="2010-10-22T03:21:08Z" finished-at="2010-10-22T03:21:08Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="5" started-at="2010-10-22T03:21:07Z" finished-at="2010-10-22T03:21:07Z">
+        </test-method>
+        <test-method status="PASS" signature="createPersistenceManagerFactory()" name="createPersistenceManagerFactory" is-config="true" duration-ms="432" started-at="2010-10-22T03:21:07Z" finished-at="2010-10-22T03:21:07Z">
+        </test-method>
+        <test-method status="PASS" signature="setUpAppEngine()" name="setUpAppEngine" is-config="true" duration-ms="0" started-at="2010-10-22T03:21:08Z" finished-at="2010-10-22T03:21:08Z">
+        </test-method>
+        <test-method status="PASS" signature="testPersistWithAuthenticatedUser()" name="testPersistWithAuthenticatedUser" duration-ms="321" started-at="2010-10-22T03:21:07Z" finished-at="2010-10-22T03:21:07Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDownAppEngine()" name="tearDownAppEngine" is-config="true" duration-ms="0" started-at="2010-10-22T03:21:07Z" finished-at="2010-10-22T03:21:07Z">
+        </test-method>
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-10-22T03:21:07Z" finished-at="2010-10-22T03:21:07Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="0" started-at="2010-10-22T03:21:07Z" finished-at="2010-10-22T03:21:07Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDownAppEngine()" name="tearDownAppEngine" is-config="true" duration-ms="0" started-at="2010-10-22T03:21:08Z" finished-at="2010-10-22T03:21:08Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="0" started-at="2010-10-22T03:21:08Z" finished-at="2010-10-22T03:21:08Z">
+        </test-method>
+        <test-method status="PASS" signature="testLatestGreetingsQuery()" name="testLatestGreetingsQuery" duration-ms="109" started-at="2010-10-22T03:21:07Z" finished-at="2010-10-22T03:21:08Z">
+        </test-method>
+        <test-method status="PASS" signature="testDelete()" name="testDelete" duration-ms="29" started-at="2010-10-22T03:21:08Z" finished-at="2010-10-22T03:21:08Z">
+        </test-method>
+        <test-method status="PASS" signature="setUpAppEngine()" name="setUpAppEngine" is-config="true" duration-ms="12" started-at="2010-10-22T03:21:07Z" finished-at="2010-10-22T03:21:07Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="1" started-at="2010-10-22T03:21:08Z" finished-at="2010-10-22T03:21:08Z">
+        </test-method>
+        <test-method status="PASS" signature="testPersistWithAnonymousUser()" name="testPersistWithAnonymousUser" duration-ms="2" started-at="2010-10-22T03:21:07Z" finished-at="2010-10-22T03:21:07Z">
+        </test-method>
+        <test-method status="PASS" signature="setUpAppEngine()" name="setUpAppEngine" is-config="true" duration-ms="0" started-at="2010-10-22T03:21:07Z" finished-at="2010-10-22T03:21:07Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDownAppEngine()" name="tearDownAppEngine" is-config="true" duration-ms="0" started-at="2010-10-22T03:21:07Z" finished-at="2010-10-22T03:21:07Z">
+        </test-method>
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-10-22T03:21:08Z" finished-at="2010-10-22T03:21:08Z">
+        </test-method>
+        <test-method status="PASS" signature="closePersistenceManagerFactory()" name="closePersistenceManagerFactory" is-config="true" duration-ms="1" started-at="2010-10-22T03:21:08Z" finished-at="2010-10-22T03:21:08Z">
+        </test-method>
+        <test-method status="PASS" signature="setUpAppEngine()" name="setUpAppEngine" is-config="true" duration-ms="0" started-at="2010-10-22T03:21:07Z" finished-at="2010-10-22T03:21:07Z">
+        </test-method>
+      </class>
+      <class name="com.example.web.TestGuestbookPage">
+        <test-method status="PASS" signature="tearDownAppEngine()" name="tearDownAppEngine" is-config="true" duration-ms="0" started-at="2010-10-22T03:21:09Z" finished-at="2010-10-22T03:21:09Z">
+        </test-method>
+        <test-method status="PASS" signature="setUpAppEngine()" name="setUpAppEngine" is-config="true" duration-ms="0" started-at="2010-10-22T03:21:08Z" finished-at="2010-10-22T03:21:08Z">
+        </test-method>
+        <test-method status="PASS" signature="setUpFilteringWicketTesterOnce()" name="setUpFilteringWicketTesterOnce" is-config="true" duration-ms="605" started-at="2010-10-22T03:21:08Z" finished-at="2010-10-22T03:21:08Z">
+        </test-method>
+        <test-method status="PASS" signature="closePersistenceManagerFactory()" name="closePersistenceManagerFactory" is-config="true" duration-ms="1" started-at="2010-10-22T03:21:09Z" finished-at="2010-10-22T03:21:09Z">
+        </test-method>
+        <test-method status="PASS" signature="testGuestbookPage()" name="testGuestbookPage" duration-ms="261" started-at="2010-10-22T03:21:08Z" finished-at="2010-10-22T03:21:09Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDownFilteringWicketTesterOnce()" name="tearDownFilteringWicketTesterOnce" is-config="true" duration-ms="10" started-at="2010-10-22T03:21:09Z" finished-at="2010-10-22T03:21:09Z">
+        </test-method>
+        <test-method status="PASS" signature="createPersistenceManagerFactory()" name="createPersistenceManagerFactory" is-config="true" duration-ms="133" started-at="2010-10-22T03:21:08Z" finished-at="2010-10-22T03:21:08Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

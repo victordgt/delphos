@@ -4,7 +4,6 @@ package br.org.universa.web;
 import java.util.Arrays;
 import java.util.List;
 
-import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.DropDownChoice;
@@ -15,13 +14,13 @@ import org.apache.wicket.model.PropertyModel;
 
 import br.org.universa.negocio.CadastroBase;
 
-/**
- * Cadastro cliente
- */
+
 public class CadastroBasePage extends WebPage {
 
 	private static final long serialVersionUID = 1L;
+	
 	private CadastroBase cadastroBase = new CadastroBase();
+
 	private List<String> categorias = Arrays.asList(new String[]{"SOFTWARE", "HARDWARE"});
 
 	/**
@@ -31,7 +30,7 @@ public class CadastroBasePage extends WebPage {
 	 *            Page parameters
 	 */
 	@SuppressWarnings("serial")
-	public CadastroBasePage(final PageParameters parameters) {
+	public CadastroBasePage() {
 		
 		//PAINEL COM AS MENSAGENS DE VALIDAÇÃO DO FORMULÁRIO
 		add(new FeedbackPanel("feedback")); 
@@ -51,12 +50,19 @@ public class CadastroBasePage extends WebPage {
     	form.add(new Button("cadastra") {
     		@Override
     		public void onSubmit() {
-    			setResponsePage(PaginaConfirmacaoCadastroBaseSalvo.class);
+    			//setResponsePage(PaginaConfirmacaoCadastroBaseSalvo.class);
+    			info("Cadastro salvo com sucesso!");
+    			
     		}
     		
     	});
     	
     	add(form);
 	}
+
+	/*
+	public CadastroBasePage() {
+		// TODO Auto-generated constructor stub
+	}*/
 
 }

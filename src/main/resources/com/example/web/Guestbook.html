@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+      xml:lang="en"
+      lang="en">
+<head>
+    <title>Google App Engine Guestbook demo on Wicket</title>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css"/>
+</head>
+
+<body>
+
+<p style="font-size: 85%; background-color: white; border-style: solid; border-width: 1px; padding: 10px;">
+    This is the
+    <a href="http://code.google.com/appengine/docs/java/overview.html">Google App Engine</a> Guestbook demo re-implemented using
+    <a href="http://wicket.apache.org">Wicket</a> (along with
+    <a href="http://code.google.com/p/google-guice/">Guice</a> for dependency injection).  Visit the
+    <a href="http://code.google.com/p/wicket-gae-template/">project page</a> for details on how you can get started on
+    your own Wicket/GAE project.
+</p>
+
+<div wicket:id="hello-user">
+    Hello, <span wicket:id="user">user</span>! (You can <a wicket:id="sign-out" href="#">sign out</a>.)
+</div>
+
+<div wicket:id="hello-anon">
+    Hello! <a wicket:id="sign-in" href="#">Sign in</a> to include your name with greetings you post.
+</div>
+
+<p wicket:id="no-messages">The guestbook has no messages.</p>
+
+<div wicket:id="messages">
+    <p><span style="font-weight: bold" wicket:id="author">somebody@somewhere</span> wrote:</p>
+    <blockquote wicket:id="message">some content</blockquote>
+</div>
+
+<form wicket:id="sign-form">
+    <div><textarea wicket:id="sign-content" rows="3" cols="60"></textarea></div>
+    <div><input type="submit" value="Post Greeting"/></div>
+</form>
+
+</body>
+</html>

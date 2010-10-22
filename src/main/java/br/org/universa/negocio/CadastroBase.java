@@ -1,5 +1,6 @@
 package br.org.universa.negocio;
 
+
 import java.io.Serializable;
 
 public class CadastroBase implements Serializable {

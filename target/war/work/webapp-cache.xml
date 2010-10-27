@@ -11,8 +11,10 @@
           <string>WEB-INF/web.xml</string>
           <string>WEB-INF/classes/br/org/universa/negocio/CadastroBase.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage$1.class</string>
+          <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage$2.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage.html</string>
+          <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage2.html</string>
           <string>WEB-INF/classes/br/org/universa/web/DelphosApplication.class</string>
           <string>WEB-INF/classes/br/org/universa/web/ListaBaseConhecimento.class</string>
           <string>WEB-INF/classes/br/org/universa/web/ListaBaseConhecimento.html</string>
@@ -21,6 +23,35 @@
           <string>WEB-INF/classes/br/org/universa/web/Login.html</string>
           <string>WEB-INF/classes/br/org/universa/web/PaginaFluxoInicial.class</string>
           <string>WEB-INF/classes/br/org/universa/web/PaginaFluxoInicial.html</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/ann.html</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/axurerppage.css</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/axurerpprototype.css</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/axurerp_beforepagescript.js</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/axurerp_pagescript.js</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/CloseButton.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/doc.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/flow.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/images.html</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/leaf.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/minus.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/newwindow.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/note.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/Other.html</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/page.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/plus.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/reload.html</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/resize.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/transparent.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/window_01.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/window_02.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/window_04.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/window_05.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/window_07.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/window_09.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/window_10.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/window_11.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/window_12.gif</string>
+          <string>WEB-INF/classes/br/org/universa/web/resources/wm.gif</string>
           <string>WEB-INF/classes/com/example/GreetingQueries.class</string>
           <string>WEB-INF/classes/com/example/jdo/JdoQueries.class</string>
           <string>WEB-INF/classes/com/example/jdo/JdoRepository.class</string>

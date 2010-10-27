@@ -8,7 +8,9 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.DropDownChoice;
 import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.form.TextArea;
 import org.apache.wicket.markup.html.form.TextField;
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.PropertyModel;
 
@@ -23,12 +25,7 @@ public class CadastroBasePage extends WebPage {
 
 	private List<String> categorias = Arrays.asList(new String[]{"SOFTWARE", "HARDWARE"});
 
-	/**
-	 * Constructor that is invoked when page is invoked without a session.
-	 * 
-	 * @param parameters
-	 *            Page parameters
-	 */
+
 	@SuppressWarnings("serial")
 	public CadastroBasePage() {
 		
@@ -42,27 +39,28 @@ public class CadastroBasePage extends WebPage {
     	choice.setRequired(true);
     	form.add(choice);
     	
+    	
     	form.add(new TextField<String>("nome", new PropertyModel<String>(this,"cadastroBase.nome")).setRequired(true));
     	form.add(new TextField<String>("versao", new PropertyModel<String>(this,"cadastroBase.versao")).setRequired(true));
-    	form.add(new TextField<String>("descricao", new PropertyModel<String>(this, "cadastroBase.descricao")).setRequired(true));
-    	form.add(new TextField<String>("solucao", new PropertyModel<String>(this, "cadastroBase.solucao")).setRequired(true));
+    	form.add(new TextArea<String>("descricao", new PropertyModel<String>(this, "cadastroBase.descricao")).setRequired(true));
+    	form.add(new TextArea<String>("solucao", new PropertyModel<String>(this, "cadastroBase.solucao")).setRequired(true));
     	
     	form.add(new Button("cadastra") {
     		@Override
     		public void onSubmit() {
-    			//setResponsePage(PaginaConfirmacaoCadastroBaseSalvo.class);
+    			
     			info("Cadastro salvo com sucesso!");
     			
     		}
     		
     	});
     	
+    	form.add(new Link<Object>("cancela") {
+            @Override
+            public void onClick() {
+            	setResponsePage(PaginaFluxoInicial.class);
+            }
+        });    	
     	add(form);
 	}
-
-	/*
-	public CadastroBasePage() {
-		// TODO Auto-generated constructor stub
-	}*/
-
 }

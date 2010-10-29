@@ -4,6 +4,8 @@ package br.org.universa.web;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.jdo.PersistenceManager;
+
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.DropDownChoice;
@@ -15,11 +17,14 @@ import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.PropertyModel;
 
 import br.org.universa.negocio.CadastroBase;
+import br.org.universa.persistencia.DAO;
 
 
 public class CadastroBasePage extends WebPage {
 
 	private static final long serialVersionUID = 1L;
+	
+	PersistenceManager pm;
 	
 	private CadastroBase cadastroBase = new CadastroBase();
 
@@ -49,8 +54,12 @@ public class CadastroBasePage extends WebPage {
     		@Override
     		public void onSubmit() {
     			
+    			DAO dao = new DAO();
+    			dao.getSession();
+  
     			info("Cadastro salvo com sucesso!");
     			
+	
     		}
     		
     	});
@@ -58,7 +67,7 @@ public class CadastroBasePage extends WebPage {
     	form.add(new Link<Object>("cancela") {
             @Override
             public void onClick() {
-            	setResponsePage(PaginaFluxoInicial.class);
+            	setResponsePage(Menu.class);
             }
         });    	
     	add(form);

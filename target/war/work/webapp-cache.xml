@@ -4,54 +4,61 @@
       <string>currentBuild</string>
       <path-set>
         <pathsSet class="linked-hash-set">
+          <string>Cadastro_files/axurerp_pagespecificscript.js</string>
+          <string>Cadastro_files/u0.png</string>
           <string>favicon.ico</string>
+          <string>login/axurerp_pagespecificscript.js</string>
+          <string>login/u1.png</string>
+          <string>Resources/ann.html</string>
+          <string>Resources/axurerppage.css</string>
+          <string>Resources/axurerpprototype.css</string>
+          <string>Resources/axurerp_beforepagescript.js</string>
+          <string>Resources/axurerp_pagescript.js</string>
+          <string>Resources/CloseButton.gif</string>
+          <string>Resources/doc.gif</string>
+          <string>Resources/flow.gif</string>
+          <string>Resources/images.html</string>
+          <string>Resources/leaf.gif</string>
+          <string>Resources/minus.gif</string>
+          <string>Resources/newwindow.gif</string>
+          <string>Resources/note.gif</string>
+          <string>Resources/Other.html</string>
+          <string>Resources/page.gif</string>
+          <string>Resources/plus.gif</string>
+          <string>Resources/reload.html</string>
+          <string>Resources/resize.gif</string>
+          <string>Resources/transparent.gif</string>
+          <string>Resources/window_01.gif</string>
+          <string>Resources/window_02.gif</string>
+          <string>Resources/window_04.gif</string>
+          <string>Resources/window_05.gif</string>
+          <string>Resources/window_07.gif</string>
+          <string>Resources/window_09.gif</string>
+          <string>Resources/window_10.gif</string>
+          <string>Resources/window_11.gif</string>
+          <string>Resources/window_12.gif</string>
+          <string>Resources/wm.gif</string>
           <string>stylesheets/main.css</string>
           <string>WEB-INF/appengine-web.xml</string>
           <string>WEB-INF/logging.properties</string>
           <string>WEB-INF/web.xml</string>
           <string>WEB-INF/classes/br/org/universa/negocio/CadastroBase.class</string>
+          <string>WEB-INF/classes/br/org/universa/persistencia/DAO.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage$1.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage$2.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage.html</string>
-          <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage2.html</string>
           <string>WEB-INF/classes/br/org/universa/web/DelphosApplication.class</string>
+          <string>WEB-INF/classes/br/org/universa/web/ListaBaseConhecimento$1.class</string>
           <string>WEB-INF/classes/br/org/universa/web/ListaBaseConhecimento.class</string>
           <string>WEB-INF/classes/br/org/universa/web/ListaBaseConhecimento.html</string>
           <string>WEB-INF/classes/br/org/universa/web/Login$LoginForm.class</string>
           <string>WEB-INF/classes/br/org/universa/web/Login.class</string>
           <string>WEB-INF/classes/br/org/universa/web/Login.html</string>
-          <string>WEB-INF/classes/br/org/universa/web/PaginaFluxoInicial.class</string>
+          <string>WEB-INF/classes/br/org/universa/web/Login2.html</string>
+          <string>WEB-INF/classes/br/org/universa/web/Menu.class</string>
+          <string>WEB-INF/classes/br/org/universa/web/Menu.html</string>
           <string>WEB-INF/classes/br/org/universa/web/PaginaFluxoInicial.html</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/ann.html</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/axurerppage.css</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/axurerpprototype.css</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/axurerp_beforepagescript.js</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/axurerp_pagescript.js</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/CloseButton.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/doc.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/flow.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/images.html</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/leaf.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/minus.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/newwindow.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/note.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/Other.html</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/page.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/plus.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/reload.html</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/resize.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/transparent.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/window_01.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/window_02.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/window_04.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/window_05.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/window_07.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/window_09.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/window_10.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/window_11.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/window_12.gif</string>
-          <string>WEB-INF/classes/br/org/universa/web/resources/wm.gif</string>
           <string>WEB-INF/classes/com/example/GreetingQueries.class</string>
           <string>WEB-INF/classes/com/example/jdo/JdoQueries.class</string>
           <string>WEB-INF/classes/com/example/jdo/JdoRepository.class</string>
@@ -70,6 +77,7 @@
           <string>WEB-INF/classes/com/example/web/GuiceModule$1.class</string>
           <string>WEB-INF/classes/com/example/web/GuiceModule.class</string>
           <string>WEB-INF/classes/META-INF/jdoconfig.xml</string>
+          <string>WEB-INF/classes/META-INF/persistence.xml</string>
           <string>WEB-INF/lib/wicket-1.4.6.jar</string>
           <string>WEB-INF/lib/slf4j-api-1.5.8.jar</string>
           <string>WEB-INF/lib/wicket-guice-1.4.6.jar</string>

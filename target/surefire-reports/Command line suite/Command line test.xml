@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Command line test" failures="0" tests="5" time="1.81" errors="0">
+<testsuite name="Command line test" failures="0" tests="5" time="1.829" errors="0">
   <properties/>
-  <testcase name="testPersistWithAuthenticatedUser" time="0.3" classname="com.example.service.JdoGreetingPersistenceTest"/>
-  <testcase name="testPersistWithAnonymousUser" time="0.0020" classname="com.example.service.JdoGreetingPersistenceTest"/>
-  <testcase name="testLatestGreetingsQuery" time="0.105" classname="com.example.service.JdoGreetingPersistenceTest"/>
+  <testcase name="testPersistWithAuthenticatedUser" time="0.302" classname="com.example.service.JdoGreetingPersistenceTest"/>
+  <testcase name="testPersistWithAnonymousUser" time="0.0030" classname="com.example.service.JdoGreetingPersistenceTest"/>
+  <testcase name="testLatestGreetingsQuery" time="0.106" classname="com.example.service.JdoGreetingPersistenceTest"/>
   <testcase name="testDelete" time="0.026" classname="com.example.service.JdoGreetingPersistenceTest"/>
-  <testcase name="testGuestbookPage" time="0.227" classname="com.example.web.TestGuestbookPage"/>
+  <testcase name="testGuestbookPage" time="0.233" classname="com.example.web.TestGuestbookPage"/>
 </testsuite>

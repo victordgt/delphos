@@ -15,7 +15,6 @@ public class Greeting implements Serializable
     @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
     private Long id;
 
-    @Persistent
     private User author;
 
     @Persistent(nullValue = NullValue.EXCEPTION)

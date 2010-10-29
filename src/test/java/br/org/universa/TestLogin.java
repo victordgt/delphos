@@ -5,7 +5,7 @@ import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Test;
 
 import br.org.universa.web.Login;
-import br.org.universa.web.PaginaFluxoInicial;
+import br.org.universa.web.Menu;
 
 public class TestLogin {
 	
@@ -21,7 +21,7 @@ public class TestLogin {
 		form.setValue("password", "senha");
 		form.submit();
 		
-		tester.assertRenderedPage(PaginaFluxoInicial.class);
+		tester.assertRenderedPage(Menu.class);
 	}
 	
 	@Test

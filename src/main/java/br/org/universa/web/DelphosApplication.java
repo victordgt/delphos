@@ -5,22 +5,10 @@ import org.apache.wicket.protocol.http.HttpSessionStore;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.session.ISessionStore;
 
-import com.example.web.Guestbook;
 import com.example.web.GuiceModule;
 
-/**
- * Application object for your web application.
- */
-public class DelphosApplication extends WebApplication
-{
-    
-	
-	/*
-	public Class<Guestbook> getHomePage()
-    {
-        return Guestbook.class;
-    }
-    */
+public class DelphosApplication extends WebApplication {
+
 	
 	public Class<Login> getHomePage()
     {
@@ -33,7 +21,7 @@ public class DelphosApplication extends WebApplication
     {
         super.init();
 
-        // for Google App Engine
+        // configuração padrãop para o Google App Engine
         getResourceSettings().setResourcePollFrequency(null);
 
         // Enable Guice for field injection on Wicket pages.  Unfortunately, constructor injection into

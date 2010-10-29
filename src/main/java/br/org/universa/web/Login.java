@@ -36,7 +36,7 @@ class LoginForm extends Form {
     String password = Login.this.getPassword();
     System.out.println("You entered User id "+ userId +
                " and Password " + password);
-    setResponsePage(PaginaFluxoInicial.class);
+    setResponsePage(Menu.class);
   }
 }
 

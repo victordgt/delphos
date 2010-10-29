@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="2.066" errors="0" skipped="0" tests="5" name="TestSuite">
+<testsuite failures="0" time="2.088" errors="0" skipped="0" tests="5" name="TestSuite">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_22\jre\bin"/>
@@ -19,7 +19,7 @@
     <property name="basedir" value="C:\Users\victort\projetos\delphos"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.6.0_22\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="surefire.real.class.path" value="C:\Users\victort\AppData\Local\Temp\surefirebooter1572549306863537890.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\victort\AppData\Local\Temp\surefirebooter7249312448132229184.jar"/>
     <property name="java.io.tmpdir" value="C:\Users\victort\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
@@ -27,7 +27,7 @@
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_22\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\9.0\DLLShared\;C:\Program Files\TortoiseSVN\bin;C:\apache-maven-2.2.1\bin"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_22\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\9.0\DLLShared\;C:\Program Files\TortoiseSVN\bin;C:\apache-maven-2.2.1\bin;C:\Program Files\TortoiseGit\bin"/>
     <property name="surefire.test.class.path" value="C:\Users\victort\projetos\delphos\target\test-classes;C:\Users\victort\projetos\delphos\target\classes;C:\Users\victort\.m2\repository\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar;C:\Users\victort\.m2\repository\org\apache\wicket\wicket\1.4.6\wicket-1.4.6.jar;C:\Users\victort\.m2\repository\org\slf4j\slf4j-api\1.5.8\slf4j-api-1.5.8.jar;C:\Users\victort\.m2\repository\org\apache\wicket\wicket-guice\1.4.6\wicket-guice-1.4.6.jar;C:\Users\victort\.m2\repository\org\apache\wicket\wicket-ioc\1.4.6\wicket-ioc-1.4.6.jar;C:\Users\victort\.m2\repository\cglib\cglib-nodep\2.1_3\cglib-nodep-2.1_3.jar;C:\Users\victort\.m2\repository\com\google\inject\guice\2.0\guice-2.0.jar;C:\Users\victort\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\victort\.m2\repository\org\slf4j\slf4j-jdk14\1.4.2\slf4j-jdk14-1.4.2.jar;C:\Users\victort\.m2\repository\com\google\inject\extensions\guice-servlet\2.0\guice-servlet-2.0.jar;C:\Users\victort\.m2\repository\com\google\appengine\appengine-api-1.0-sdk\1.3.1\appengine-api-1.0-sdk-1.3.1.jar;C:\Users\victort\.m2\repository\com\google\appengine\appengine-api-labs\1.3.1\appengine-api-labs-1.3.1.jar;C:\Users\victort\.m2\repository\com\google\appengine\appengine-api-stubs\1.3.1\appengine-api-stubs-1.3.1.jar;C:\Users\victort\.m2\repository\com\google\appengine\orm\datanucleus-appengine\1.0.5\datanucleus-appengine-1.0.5.jar;C:\Users\victort\.m2\repository\com\google\appengine\appengine-testing\1.3.1\appengine-testing-1.3.1.jar;C:\Users\victort\.m2\repository\javax\jdo\jdo2-api\2.3-eb\jdo2-api-2.3-eb.jar;C:\Users\victort\.m2\repository\org\apache\geronimo\specs\geronimo-jta_1.1_spec\1.1.1\geronimo-jta_1.1_spec-1.1.1.jar;C:\Users\victort\.m2\repository\org\apache\geronimo\specs\geronimo-jpa_3.0_spec\1.1.1\geronimo-jpa_3.0_spec-1.1.1.jar;C:\Users\victort\.m2\repository\org\datanucleus\datanucleus-core\1.1.5\datanucleus-core-1.1.5.jar;C:\Users\victort\.m2\repository\org\datanucleus\datanucleus-jpa\1.1.5\datanucleus-jpa-1.1.5.jar;C:\Users\victort\.m2\repository\org\testng\testng\5.8\testng-5.8-jdk15.jar;C:\Users\victort\.m2\repository\junit\junit\4.0\junit-4.0.jar;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="50.0"/>
@@ -60,9 +60,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.305" classname="com.example.service.JdoGreetingPersistenceTest" name="testPersistWithAuthenticatedUser"/>
+  <testcase time="0.306" classname="com.example.service.JdoGreetingPersistenceTest" name="testPersistWithAuthenticatedUser"/>
   <testcase time="0.003" classname="com.example.service.JdoGreetingPersistenceTest" name="testPersistWithAnonymousUser"/>
-  <testcase time="0.106" classname="com.example.service.JdoGreetingPersistenceTest" name="testLatestGreetingsQuery"/>
-  <testcase time="0.026" classname="com.example.service.JdoGreetingPersistenceTest" name="testDelete"/>
-  <testcase time="0.228" classname="com.example.web.TestGuestbookPage" name="testGuestbookPage"/>
+  <testcase time="0.107" classname="com.example.service.JdoGreetingPersistenceTest" name="testLatestGreetingsQuery"/>
+  <testcase time="0.027" classname="com.example.service.JdoGreetingPersistenceTest" name="testDelete"/>
+  <testcase time="0.233" classname="com.example.web.TestGuestbookPage" name="testGuestbookPage"/>
 </testsuite>

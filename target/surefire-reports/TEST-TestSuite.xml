@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.968" errors="0" skipped="0" tests="0" name="TestSuite">
+<testsuite failures="0" time="0.875" errors="0" skipped="0" tests="0" name="TestSuite">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Arquivos de programas\Java\jdk1.6.0_22\jre\bin"/>
@@ -19,7 +19,7 @@
     <property name="basedir" value="C:\Documents and Settings\victor\projetos\delphos"/>
     <property name="java.endorsed.dirs" value="C:\Arquivos de programas\Java\jdk1.6.0_22\jre\lib\endorsed"/>
     <property name="os.arch" value="x86"/>
-    <property name="surefire.real.class.path" value="C:\DOCUME~1\victor\CONFIG~1\Temp\surefirebooter4886930655777671116.jar"/>
+    <property name="surefire.real.class.path" value="C:\DOCUME~1\victor\CONFIG~1\Temp\surefirebooter6805851032906679548.jar"/>
     <property name="java.io.tmpdir" value="C:\DOCUME~1\victor\CONFIG~1\Temp\"/>
     <property name="line.separator" value="
 "/>

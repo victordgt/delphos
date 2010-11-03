@@ -1,6 +1,15 @@
 <HTML xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
 <HEAD><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="imagetoolbar" content="no"><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><link href="Resources/axurerppage.css" type="text/css" rel="stylesheet">
-<SCRIPT src="Resources/axurerp_beforepagescript.js"></SCRIPT></HEAD><BODY>
+<SCRIPT src="Resources/axurerp_beforepagescript.js"></SCRIPT>
+<SCRIPT type="text/javascript">
+	function hideFeedback() {
+	document.getElementById("feedback").style.visibility = "hidden";
+	}
+</SCRIPT>
+</HEAD>
+
+
+<BODY>
 <DIV id=u0 style="position:absolute; left:40px; top:50px; width:535px; height:405px;">
 
 <span style="position:absolute; left:-3px; top:-3px; width:539px; height:409px; ;
@@ -73,6 +82,8 @@ PARA ADICIONAR FUTURAMENTE O CAMPO TAG
 <DIV id=u20 style="position:absolute; left:41px; top:17px; width:290px; height:23px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
 <DIV id=u20_rtf><span style=" font-family:'Arial Black'; color:#003366; font-size:16px;"><b>Base de Conhecimento de TI</b></span></DIV></DIV><SCRIPT src="Resources/axurerp_pagescript.js"></SCRIPT>
 
-<DIV wicket:id="feedback" style="position:absolute; left:20px; top:502px; width:180px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word; color:#FF0000;"></DIV>
+<DIV id=feedback wicket:id="feedback" style="position: relative; width: 300px; left: 0px; top: 15px; z-index:10; border-style:solid; background-color:white; "
+	onclick="hideFeedback()">
+</DIV>
 
 </BODY></HTML>

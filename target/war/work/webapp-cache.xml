@@ -40,16 +40,23 @@
           <string>Resources/wm.gif</string>
           <string>stylesheets/main.css</string>
           <string>WEB-INF/appengine-web.xml</string>
+          <string>WEB-INF/datastore-indexes.xml</string>
           <string>WEB-INF/logging.properties</string>
           <string>WEB-INF/web.xml</string>
           <string>WEB-INF/classes/br/org/universa/negocio/CadastroBase.class</string>
-          <string>WEB-INF/classes/br/org/universa/persistencia/DAO.class</string>
+          <string>WEB-INF/classes/br/org/universa/persistencia/CadastroBaseDAO.class</string>
+          <string>WEB-INF/classes/br/org/universa/persistencia/DAOBase.class</string>
+          <string>WEB-INF/classes/br/org/universa/persistencia/EMF.class</string>
+          <string>WEB-INF/classes/br/org/universa/web/CadastroBaseDataProvider.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage$1.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage$2.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage.html</string>
           <string>WEB-INF/classes/br/org/universa/web/DelphosApplication.class</string>
+          <string>WEB-INF/classes/br/org/universa/web/DetachableCadastroModel.class</string>
+          <string>WEB-INF/classes/br/org/universa/web/ListaBaseConhecimento$1$1.class</string>
           <string>WEB-INF/classes/br/org/universa/web/ListaBaseConhecimento$1.class</string>
+          <string>WEB-INF/classes/br/org/universa/web/ListaBaseConhecimento$2.class</string>
           <string>WEB-INF/classes/br/org/universa/web/ListaBaseConhecimento.class</string>
           <string>WEB-INF/classes/br/org/universa/web/ListaBaseConhecimento.html</string>
           <string>WEB-INF/classes/br/org/universa/web/Login$LoginForm.class</string>
@@ -59,24 +66,8 @@
           <string>WEB-INF/classes/br/org/universa/web/Menu.class</string>
           <string>WEB-INF/classes/br/org/universa/web/Menu.html</string>
           <string>WEB-INF/classes/br/org/universa/web/PaginaFluxoInicial.html</string>
-          <string>WEB-INF/classes/com/example/GreetingQueries.class</string>
-          <string>WEB-INF/classes/com/example/jdo/JdoQueries.class</string>
-          <string>WEB-INF/classes/com/example/jdo/JdoRepository.class</string>
-          <string>WEB-INF/classes/com/example/jdo/PersistenceManagerFilter$GuiceModule$1.class</string>
-          <string>WEB-INF/classes/com/example/jdo/PersistenceManagerFilter$GuiceModule.class</string>
-          <string>WEB-INF/classes/com/example/jdo/PersistenceManagerFilter.class</string>
-          <string>WEB-INF/classes/com/example/model/Greeting.class</string>
-          <string>WEB-INF/classes/com/example/Repository.class</string>
-          <string>WEB-INF/classes/com/example/service/JdoGreetingQueries.class</string>
-          <string>WEB-INF/classes/com/example/service/JdoGreetingRepository.class</string>
-          <string>WEB-INF/classes/com/example/web/Guestbook$1.class</string>
-          <string>WEB-INF/classes/com/example/web/Guestbook$2.class</string>
-          <string>WEB-INF/classes/com/example/web/Guestbook$3.class</string>
-          <string>WEB-INF/classes/com/example/web/Guestbook.class</string>
           <string>WEB-INF/classes/com/example/web/Guestbook.html</string>
-          <string>WEB-INF/classes/com/example/web/GuiceModule$1.class</string>
           <string>WEB-INF/classes/com/example/web/GuiceModule.class</string>
-          <string>WEB-INF/classes/META-INF/jdoconfig.xml</string>
           <string>WEB-INF/classes/META-INF/persistence.xml</string>
           <string>WEB-INF/lib/wicket-1.4.6.jar</string>
           <string>WEB-INF/lib/slf4j-api-1.5.8.jar</string>
@@ -95,7 +86,6 @@
           <string>WEB-INF/lib/geronimo-jpa_3.0_spec-1.1.1.jar</string>
           <string>WEB-INF/lib/datanucleus-core-1.1.5.jar</string>
           <string>WEB-INF/lib/datanucleus-jpa-1.1.5.jar</string>
-          <string>WEB-INF/lib/junit-4.0.jar</string>
         </pathsSet>
       </path-set>
     </entry>
@@ -318,11 +308,10 @@
         <artifactId>junit</artifactId>
         <version>4.0</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>test</scope>
         <exclusions/>
         <optional>false</optional>
       </dependency>
-      <targetFileName>junit-4.0.jar</targetFileName>
     </org.apache.maven.plugin.war.util.DependencyInfo>
   </dependenciesInfo>
 </webapp-structure>

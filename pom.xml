@@ -20,7 +20,7 @@
         <gae.version>1.3.1</gae.version>
 
         <!-- This path should contain the JDO @PersistenceCapable classes. -->
-        <jdo.model.path>**/model/*.class</jdo.model.path>
+        <jpa.model.path>**/negocio/*.class</jpa.model.path>
     </properties>
 
     <dependencies>
@@ -114,6 +114,7 @@
             These jars ship with the GAE SDK, but can be obtained from public repositories.
         -->
 
+ 
         <dependency>
             <groupId>javax.jdo</groupId>
             <artifactId>jdo2-api</artifactId>
@@ -126,6 +127,8 @@
             </exclusions>
         </dependency>
 
+ 
+ 
         <dependency>
             <groupId>org.apache.geronimo.specs</groupId>
             <artifactId>geronimo-jta_1.1_spec</artifactId>
@@ -174,6 +177,7 @@
 	      <groupId>junit</groupId>
 	      <artifactId>junit</artifactId>
 	      <version>4.0</version>
+	      <scope>test</scope>
 	    </dependency>
     </dependencies>
 
@@ -202,6 +206,7 @@
                 <includes>
                     <include>**</include>
                 </includes>
+                
                 <excludes>
                     <exclude>**/*.java</exclude>
                 </excludes>
@@ -222,15 +227,37 @@
                     <debug>true</debug>
                 </configuration>
             </plugin>
+            
+            <!-- 
+			<plugin>
+                <groupId>org.datanucleus</groupId>
+                <artifactId>maven-datanucleus-plugin</artifactId>
+                <version>2.0.0-release</version>
+                <configuration>
+    				<mappingIncludes>${jpa.model.path}</mappingIncludes>
+                    <verbose>true</verbose>
+                    <enhancerName>ASM</enhancerName>
+                    <api>JPA</api>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>enhance</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>            
+           -->
             <plugin>
                 <groupId>org.datanucleus</groupId>
                 <artifactId>maven-datanucleus-plugin</artifactId>
                 <version>1.1.4</version>
                 <configuration>
-                    <mappingIncludes>${jdo.model.path}</mappingIncludes>
+                    <mappingIncludes>${jpa.model.path}</mappingIncludes>
                     <verbose>true</verbose>
                     <enhancerName>ASM</enhancerName>
-                    <api>JDO</api>
+                    <api>JPA</api>
                 </configuration>
                 <executions>
                     <execution>
@@ -264,6 +291,8 @@
                     </dependency>
                 </dependencies>
             </plugin>
+
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>

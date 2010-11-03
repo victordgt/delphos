@@ -18,7 +18,7 @@
     <!--</filter-mapping>-->
 
     <!-- Provides a managed, inject-able PersistenceManager per request thread. -->
-    <filter>
+    <!-- <filter>
         <filter-name>jdo-pm</filter-name>
         <filter-class>com.example.jdo.PersistenceManagerFilter</filter-class>
     </filter>
@@ -27,7 +27,7 @@
         <filter-name>jdo-pm</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-
+ -->
     <!-- Enables Wicket to handle all requests. -->
     <filter>
         <filter-name>wicket</filter-name>

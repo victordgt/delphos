@@ -1,0 +1,1 @@
+mvn install:install-file -DgroupId=javax.jdo -DartifactId=jdo2-api -Dversion=2.3-ec -Dpackaging=jar -Dfile=jdo2-api-2.3-ec

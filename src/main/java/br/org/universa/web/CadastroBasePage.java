@@ -4,8 +4,6 @@ package br.org.universa.web;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.jdo.PersistenceManager;
-
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.DropDownChoice;
@@ -15,16 +13,16 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.PropertyModel;
+import org.apache.wicket.util.value.ValueMap;
 
 import br.org.universa.negocio.CadastroBase;
-import br.org.universa.persistencia.DAO;
+import br.org.universa.persistencia.CadastroBaseDAO;
+import br.org.universa.persistencia.DAOBase;
 
 
 public class CadastroBasePage extends WebPage {
 
 	private static final long serialVersionUID = 1L;
-	
-	PersistenceManager pm;
 	
 	private CadastroBase cadastroBase = new CadastroBase();
 
@@ -53,13 +51,10 @@ public class CadastroBasePage extends WebPage {
     	form.add(new Button("cadastra") {
     		@Override
     		public void onSubmit() {
-    			
-    			DAO dao = new DAO();
-    			dao.getSession();
-  
+       			CadastroBaseDAO dao = new CadastroBaseDAO();
+    			dao.salvaOuAltera(cadastroBase);
     			info("Cadastro salvo com sucesso!");
     			
-	
     		}
     		
     	});

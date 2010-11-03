@@ -1,29 +1,28 @@
 package br.org.universa.negocio;
 
+import java.io.Serializable;
 
-import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity
-public class CadastroBase {
+
+
+@Entity(name="br.org.universa.negocio.CadastroBase")
+@Table(name="CADASTRO_BASE")
+public class CadastroBase implements Serializable {
 	
+	private static final long serialVersionUID = 239332656829145186L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Basic
 	private String titulo;
-	@Basic
 	private String categoria;
-	@Basic
 	private String nome;
-	@Basic
 	private String versao;
-	@Basic
 	private String descricao;
-	@Basic
 	private String solucao;
 
 	public void setTitulo(String titulo) {

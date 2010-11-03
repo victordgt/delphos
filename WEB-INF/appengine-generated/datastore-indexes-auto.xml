@@ -1,4 +1,11 @@
 <!-- Indices written at Fri, 29 Oct 2010 16:59:05 BRST -->
 
-<datastore-indexes/>
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes
+  autoGenerate="false">
+    <datastore-index kind="br.org.universa.negocio.CadastroBase" ancestor="false">
+        <property name="id" direction="asc" />
+        <property name="nome" direction="asc" />
+    </datastore-index>
+</datastore-indexes>
 

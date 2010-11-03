@@ -6,10 +6,11 @@
 
     <persistence-unit name="transactions-optional">
         <provider>org.datanucleus.store.appengine.jpa.DatastorePersistenceProvider</provider>
+        <class>br.org.universa.negocio.CadastroBase</class>
         <properties>
             <property name="datanucleus.NontransactionalRead" value="true"/>
             <property name="datanucleus.NontransactionalWrite" value="true"/>
-            <property name="datanucleus.ConnectionURL" value="appengine"/>
+            <property name="datanucleus.ConnectionURL" value="appengine"/> 
         </properties>
     </persistence-unit>
 

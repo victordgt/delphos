@@ -13,11 +13,9 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.PropertyModel;
-import org.apache.wicket.util.value.ValueMap;
 
 import br.org.universa.negocio.CadastroBase;
 import br.org.universa.persistencia.CadastroBaseDAO;
-import br.org.universa.persistencia.DAOBase;
 
 
 public class CadastroBasePage extends WebPage {

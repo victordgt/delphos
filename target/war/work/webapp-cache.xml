@@ -47,14 +47,11 @@
           <string>WEB-INF/classes/br/org/universa/persistencia/CadastroBaseDAO.class</string>
           <string>WEB-INF/classes/br/org/universa/persistencia/DAOBase.class</string>
           <string>WEB-INF/classes/br/org/universa/persistencia/EMF.class</string>
-          <string>WEB-INF/classes/br/org/universa/web/CadastroBaseDataProvider.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage$1.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage$2.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage.class</string>
           <string>WEB-INF/classes/br/org/universa/web/CadastroBasePage.html</string>
           <string>WEB-INF/classes/br/org/universa/web/DelphosApplication.class</string>
-          <string>WEB-INF/classes/br/org/universa/web/DetachableCadastroModel.class</string>
-          <string>WEB-INF/classes/br/org/universa/web/ListaBaseConhecimento$1$1.class</string>
           <string>WEB-INF/classes/br/org/universa/web/ListaBaseConhecimento$1.class</string>
           <string>WEB-INF/classes/br/org/universa/web/ListaBaseConhecimento$2.class</string>
           <string>WEB-INF/classes/br/org/universa/web/ListaBaseConhecimento.class</string>
@@ -62,12 +59,13 @@
           <string>WEB-INF/classes/br/org/universa/web/Login$LoginForm.class</string>
           <string>WEB-INF/classes/br/org/universa/web/Login.class</string>
           <string>WEB-INF/classes/br/org/universa/web/Login.html</string>
-          <string>WEB-INF/classes/br/org/universa/web/Login2.html</string>
           <string>WEB-INF/classes/br/org/universa/web/Menu.class</string>
           <string>WEB-INF/classes/br/org/universa/web/Menu.html</string>
           <string>WEB-INF/classes/br/org/universa/web/PaginaFluxoInicial.html</string>
           <string>WEB-INF/classes/com/example/web/Guestbook.html</string>
           <string>WEB-INF/classes/com/example/web/GuiceModule.class</string>
+          <string>WEB-INF/classes/datanucleus-appengine-1.0.5.jar</string>
+          <string>WEB-INF/classes/jdo2-api-2.3-ec.jar</string>
           <string>WEB-INF/classes/META-INF/persistence.xml</string>
           <string>WEB-INF/lib/wicket-1.4.6.jar</string>
           <string>WEB-INF/lib/slf4j-api-1.5.8.jar</string>

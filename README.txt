@@ -2,7 +2,7 @@
 
 git init
 git config --global user.name "usuario"
-git config --global user.mail "usuario@gmail.com"
+git config --global user.email "usuario@gmail.com"
 
 2)para baixar projeto pela primeira vez:
 git clone git@github.com:victordgt/delphos.git

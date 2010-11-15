@@ -52,6 +52,7 @@ public class CadastroBasePage extends WebPage {
     		public void onSubmit() {
        			CadastroBaseDAO dao = new CadastroBaseDAO();
     			dao.salvaOuAltera(cadastroBase);
+    			feedback.setVisible(true);
     			info("Cadastro salvo com sucesso!");
     			
     		}

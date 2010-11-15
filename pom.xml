@@ -21,6 +21,9 @@
 
         <!-- This path should contain the JDO @PersistenceCapable classes. -->
         <jpa.model.path>**/negocio/*.class</jpa.model.path>
+        
+        <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+        
     </properties>
 
     <dependencies>
@@ -162,7 +165,7 @@
         </dependency>
 
         <!-- TestNG -->
-
+<!-- 
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -170,7 +173,7 @@
             <classifier>jdk15</classifier>
             <scope>test</scope>
         </dependency>
-        
+       -->  
         
 		<!--  JUNIT DEPENDENCY FOR TESTING -->
 	    <dependency>

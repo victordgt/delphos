@@ -4,7 +4,9 @@ import java.util.Collection;
 
 import javax.persistence.EntityManager;
 
-public abstract class DAOBase<T> {
+import br.org.universa.negocio.Entidade;
+
+public abstract class DAOBase<T extends Entidade> {
 	 
 	private EntityManager em;
 	protected Class<T> clazz;
@@ -23,9 +25,15 @@ public abstract class DAOBase<T> {
 
 	public void exclui(T entidade) {
 		try {
+
 			getSession().getTransaction().begin();
-			getSession().remove(entidade);
+			
+			//como o objeto dado como parâmetro pode estar detached, então é necessário recuperar um objeto que esteja em uma sessão.
+			T entidade2 = getSession().find(clazz, entidade.getId());
+			
+			getSession().remove(entidade2);
 			getSession().getTransaction().commit();
+
 		} finally {
 			getSession().close();
 		}

@@ -19,11 +19,11 @@ import br.org.universa.persistencia.CadastroBaseDAO;
 
 
 public class CadastroBasePage extends WebPage {
-
+	
 	private static final long serialVersionUID = 1L;
 	
+	private static FeedbackPanel feedback = new FeedbackPanel("feedback");
 	private CadastroBase cadastroBase = new CadastroBase();
-
 	private List<String> categorias = Arrays.asList(new String[]{"SOFTWARE", "HARDWARE"});
 
 
@@ -31,7 +31,7 @@ public class CadastroBasePage extends WebPage {
 	public CadastroBasePage() {
 		
 		//PAINEL COM AS MENSAGENS DE VALIDAÇÃO DO FORMULÁRIO
-		add(new FeedbackPanel("feedback")); 
+		add(feedback.setVisible(false)); 
 		
      	Form<Object> form = new Form<Object>("form");
     	form.add(new TextField<String>("titulo", new PropertyModel<String>(this,"cadastroBase.titulo")));
@@ -53,6 +53,12 @@ public class CadastroBasePage extends WebPage {
     			dao.salvaOuAltera(cadastroBase);
     			info("Cadastro salvo com sucesso!");
     			
+    		}
+    		
+    		@Override
+    		protected void onInvalid() {
+    			super.onInvalid();
+    			feedback.setVisible(true);
     		}
     		
     	});

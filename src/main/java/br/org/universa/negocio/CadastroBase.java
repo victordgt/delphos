@@ -1,6 +1,5 @@
 package br.org.universa.negocio;
 
-import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,12 +11,11 @@ import javax.persistence.Table;
 
 @Entity(name="br.org.universa.negocio.CadastroBase")
 @Table(name="CADASTRO_BASE")
-public class CadastroBase implements Serializable {
+public class CadastroBase extends Entidade {
 	
-	private static final long serialVersionUID = 239332656829145186L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private static final long serialVersionUID = 1L;
+	
+
 	private String titulo;
 	private String categoria;
 	private String nome;
@@ -71,13 +69,5 @@ public class CadastroBase implements Serializable {
 
 	public String getSolucao() {
 		return solucao;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getId() {
-		return id;
 	}
 }

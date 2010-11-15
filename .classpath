@@ -19,7 +19,7 @@
   <classpathentry kind="var" path="M2_REPO/com/google/inject/guice/2.0/guice-2.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/google/inject/extensions/guice-servlet/2.0/guice-servlet-2.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/junit/junit/4.0/junit-4.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-jdk14/1.4.2/slf4j-jdk14-1.4.2.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/testng/testng/5.8/testng-5.8-jdk15.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/apache/wicket/wicket/1.4.6/wicket-1.4.6.jar"/>

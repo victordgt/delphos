@@ -18,11 +18,12 @@ import br.org.universa.negocio.CadastroBase;
 import br.org.universa.persistencia.CadastroBaseDAO;
 
 
+
 public class CadastroBasePage extends WebPage {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private static FeedbackPanel feedback = new FeedbackPanel("feedback");
+	private FeedbackPanel feedback = new FeedbackPanel("feedback");
 	private CadastroBase cadastroBase = new CadastroBase();
 	private List<String> categorias = Arrays.asList(new String[]{"SOFTWARE", "HARDWARE"});
 

@@ -15,25 +15,34 @@ git add .
 git commit (abre o editor vim, onde deve inserir o comentário e teclar esc e depois  :wq e enter)
 git push origin master
 
-5)ao baixar, instalar o GOOGLE APP ENGINE SDK:
+5)para ignorar arquivos no GIT:
+criar arquivo .gitignore no raiz
+colocar as extensões a serem ignoradas, por exemplo "target/*". Isto significa todos os arquivos na pasta target
+git add .
+git commit
+git push origin master
+
+
+6)ao baixar, instalar o GOOGLE APP ENGINE SDK:
 mvn gae:unpack
 
-6)para instalar os pacotes necessários do repositório:
+7)para instalar os pacotes necessários do repositório:
 mvn install
 
-7)caso falhe algum jar do repositório(exemplo: jdo):
-mvn install:install-file -DgroupId=javax.jdo -DartifactId=jdo2-api -Dversion=2.3-ec -Dpackaging=jar -Dfile=src/main/resources/jdo2-api-2.3-ec.jar
+8)caso falhe algum jar do repositório(exemplo: jdo ou datanucleus):
+mvn install:install-file -DgroupId=javax.jdo -DartifactId=jdo2-api -Dversion=2.3-ec -Dpackaging=jar -Dfile=lib/jdo2-api-2.3-ec.jar
+mvn install:install-file -DgroupId=com.google.appengine.orm -DartifactId=datanucleus-appengine -Dversion=1.0.5 -Dpackaging=jar -Dfile=lib/datanucleus-appengine-1.0.5.jar
 
-8)para criar um projeto no eclipse:
+9)para criar um projeto no eclipse:
 mvn eclipse:eclipse
 
-9)para executar o projeto:
+10)para executar o projeto:
 mvn gae:run
 
-10)para fazer o deploy:
+11)para fazer o deploy:
 mvn gae:deploy
 
-11) LINKS:
+12) LINKS:
 * Tortoisegit para windows - http://code.google.com/p/tortoisegit
 * Git para windows - http://code.google.com/p/msysgit/
 * Esqueleto wicket para google app engine - http://code.google.com/p/wicket-gae-template/

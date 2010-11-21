@@ -1,6 +1,6 @@
 package br.org.universa.persistencia;
 
-import java.util.Collection;
+import java.util.ArrayList;
 
 import javax.persistence.EntityManager;
 
@@ -29,9 +29,8 @@ public abstract class DAOBase<T extends Entidade> {
 			getSession().getTransaction().begin();
 			
 			//como o objeto dado como parâmetro pode estar detached, então é necessário recuperar um objeto que esteja em uma sessão.
-			T entidade2 = getSession().find(clazz, entidade.getId());
-			
-			getSession().remove(entidade2);
+			T entidadeManaged = getSession().find(clazz, entidade.getId());
+			getSession().remove(entidadeManaged);
 			getSession().getTransaction().commit();
 
 		} finally {
@@ -48,17 +47,27 @@ public abstract class DAOBase<T extends Entidade> {
 		}
 		return entidade;
 	}
-
-	public abstract Collection<T> recuperaTodos();
+	
+	public abstract ArrayList<T> recuperar(boolean todos, int maximoResultados, int primeiroResultado);
+	
+	public ArrayList<T> recuperaTodos() {
+		//Recupera todos, os parametros com zero não fazem diferença
+		return recuperar(true, 0, 0);
+	}
 
 	public void salvaOuAltera(T entidade) {
 		try {
 			getSession().getTransaction().begin();
 			getSession().persist(entidade);
 			getSession().getTransaction().commit();
-		} finally {
+			
+		} catch(Exception ex) {
+			ex.printStackTrace();
+			throw new RuntimeException("Erro ao salvar entidade");
+		}	finally {
 			getSession().close();
 		}
+		
 	}
 
 }

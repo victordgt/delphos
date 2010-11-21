@@ -6,17 +6,16 @@ import java.util.List;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.form.AjaxFormComponentUpdatingBehavior;
-import org.apache.wicket.behavior.AttributeAppender;
-import org.apache.wicket.behavior.SimpleAttributeModifier;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.DropDownChoice;
 import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.form.RequiredTextField;
 import org.apache.wicket.markup.html.form.TextArea;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
-import org.apache.wicket.model.Model;
+import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.PropertyModel;
 
 import br.org.universa.negocio.CadastroBase;
@@ -24,25 +23,24 @@ import br.org.universa.persistencia.CadastroBaseDAO;
 
 
 
-public class CadastroBasePage extends WebPage {
+public class EditaCadastroBasePage extends WebPage {
 	
 	private static final long serialVersionUID = 1L;
 	
 	private FeedbackPanel feedback = new FeedbackPanel("feedback");
-	private CadastroBase cadastroBase = new CadastroBase();
+	private final CadastroBase cadastroBase;
 	private List<String> categorias = Arrays.asList(new String[]{"SOFTWARE", "HARDWARE"});
 
-
 	@SuppressWarnings("serial")
-	public CadastroBasePage() {
-		
+	public EditaCadastroBasePage(CadastroBase cadastroBase) {
+		this.cadastroBase = cadastroBase;
 		//PAINEL COM AS MENSAGENS DE VALIDAÇÃO DO FORMULÁRIO
 		add(feedback.setVisible(false)); 
 		
-     	Form<Object> form = new Form<Object>("form");
-    	form.add(new TextField<String>("titulo", new PropertyModel<String>(this,"cadastroBase.titulo")));
+     	Form<CadastroBase> form = new Form<CadastroBase>("form", new CompoundPropertyModel<CadastroBase>(this.cadastroBase));
+    	form.add(new TextField<String>("titulo"));
     	
-    	final TextField<String> versao = new TextField<String>("versao", new PropertyModel<String>(this,"cadastroBase.versao"));
+    	final TextField<String> versao = new TextField<String>("versao");
     	versao.setRequired(true);
     	versao.setOutputMarkupId(true); // habilita ajax
     	
@@ -68,23 +66,28 @@ public class CadastroBasePage extends WebPage {
         });
     	
     	
-    	
-    	
-    	form.add(new TextField<String>("nome", new PropertyModel<String>(this,"cadastroBase.nome")).setRequired(true));
+    	form.add(new RequiredTextField<String>("nome"));
     	
 		form.add(versao);
-    	form.add(new TextArea<String>("descricao", new PropertyModel<String>(this, "cadastroBase.descricao")).setRequired(true));
-    	form.add(new TextArea<String>("solucao", new PropertyModel<String>(this, "cadastroBase.solucao")).setRequired(true));
+    	TextArea<String> descricao = new TextArea<String>("descricao");
+    	descricao.setRequired(true);
+    	
+		form.add(descricao);
+    	TextArea<String> solucao = new TextArea<String>("solucao");
+    	solucao.setRequired(true);
+		form.add(solucao);
     	
     	form.add(new Button("cadastra") {
     		@Override
     		public void onSubmit() {
+    			
+    			CadastroBase cadastroBase = (CadastroBase)getForm().getModelObject();
     			super.onSubmit();
        			CadastroBaseDAO dao = new CadastroBaseDAO();
        			try {
        				dao.salvaOuAltera(cadastroBase);
-      				setResponsePage(CadastroBasePage.class);
-    				info("Cadastro salvo com sucesso!"); //TODO Fazer aparecer o cadastro salvo quando já fez o redirecet
+      				setResponsePage(ListaBaseConhecimento.class);
+    				info("Cadastro salvo com sucesso!"); //TODO Fazer aparecer o cadastro salvo quando já fez o redirect
   
        			} catch(RuntimeException ex) {
        				getSession().info(ex.getMessage());     				
@@ -102,9 +105,11 @@ public class CadastroBasePage extends WebPage {
     	form.add(new Link<Object>("cancela") {
             @Override
             public void onClick() {
-            	setResponsePage(Menu.class);
+            	setResponsePage(ListaBaseConhecimento.class);
             }
         });    	
     	add(form);
 	}
+	
+	
 }

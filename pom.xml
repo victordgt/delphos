@@ -24,6 +24,8 @@
         
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         
+        <maven.test.skip>true</maven.test.skip>
+        
     </properties>
 
     <dependencies>
@@ -309,6 +311,7 @@
                 <version>2.5</version>
                 <configuration>
                     <useFile>false</useFile>
+                    
                 </configuration>
             </plugin>
             <plugin>

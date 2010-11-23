@@ -45,7 +45,7 @@ mvn gae:deploy
 12)para executar o console de administração de banco de dados no localhost do GAE:
 http://localhost:8080/_ah/admin
 
-12) LINKS:
+13) LINKS:
 * Tortoisegit para windows - http://code.google.com/p/tortoisegit
 * Git para windows - http://code.google.com/p/msysgit/
 * Esqueleto wicket para google app engine - http://code.google.com/p/wicket-gae-template/

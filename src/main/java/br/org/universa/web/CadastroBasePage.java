@@ -6,8 +6,6 @@ import java.util.List;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.form.AjaxFormComponentUpdatingBehavior;
-import org.apache.wicket.behavior.AttributeAppender;
-import org.apache.wicket.behavior.SimpleAttributeModifier;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.DropDownChoice;
@@ -16,7 +14,6 @@ import org.apache.wicket.markup.html.form.TextArea;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
-import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
 
 import br.org.universa.negocio.CadastroBase;
@@ -84,7 +81,7 @@ public class CadastroBasePage extends WebPage {
        			try {
        				dao.salvaOuAltera(cadastroBase);
       				setResponsePage(CadastroBasePage.class);
-    				info("Cadastro salvo com sucesso!"); //TODO Fazer aparecer o cadastro salvo quando já fez o redirecet
+    				info("Cadastro salvo com sucesso!"); //TODO Fazer aparecer o cadastro salvo quando já fez o redirect
   
        			} catch(RuntimeException ex) {
        				getSession().info(ex.getMessage());     				

@@ -5,6 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <link href="Resources/axurerppage.css" type="text/css" rel="stylesheet">
 <!--  x<SCRIPT src="Resources/axurerp_beforepagescript.js"></SCRIPT> -->
+<SCRIPT type="text/javascript">
+	function hideFeedback() {
+	document.getElementById("feedback").style.visibility = "hidden";
+	}
+</SCRIPT>
 </HEAD>
 
 <BODY>
@@ -35,8 +40,8 @@ src="login/u1.png" border="0" alt=""></span>
 
 </DIV>
 
-<INPUT id=u4 wicket:id="userId" type=text value="" style="position:absolute; left:236px; top:133px; width:180px; height:25px; ; background-color:#FFFFFF; text-align: left ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   >
-<INPUT id=u5 wicket:id="password" type="password" value="" style="position:absolute; left:236px; top:168px; width:180px; height:25px; ; background-color:#FFFFFF; text-align: left ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   >
+<INPUT id=u4 wicket:id="userId" type=text title="Usu&aacute;rio: teste" style="position:absolute; left:236px; top:133px; width:180px; height:25px; ; background-color:#FFFFFF; text-align: left ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   >
+<INPUT id=u5 wicket:id="password" type="password" title="Senha: teste" value="" style="position:absolute; left:236px; top:168px; width:180px; height:25px; ; background-color:#FFFFFF; text-align: left ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   >
 </FORM>
 
 <DIV id=u6 style="position:absolute; left:98px; top:138px; width:110px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
@@ -49,7 +54,9 @@ src="login/u1.png" border="0" alt=""></span>
 <DIV id=u9_rtf><span style=" font-family:'Arial Black'; color:#003366; font-size:16px;"><b>Base de Conhecimento de TI</b></span></DIV></DIV>
 
 <!-- <SCRIPT src="Resources/axurerp_pagescript.js"></SCRIPT>  -->
-
+<DIV id="feedback" wicket:id="feedback" style="position: relative; width: 300px; left: 0px; top: 15px; z-index:10; border-style:solid; background-color:white; "
+	onclick="hideFeedback()">
+</DIV>
 
 </BODY>
 </HTML>

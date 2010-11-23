@@ -5,4 +5,8 @@
         <property name="id" direction="asc" />
         <property name="nome" direction="asc" />
     </datastore-index>
+    <datastore-index kind="br.org.universa.negocio.Usuario" ancestor="false">
+        <property name="id" direction="asc" />
+        <property name="login" direction="asc" />
+    </datastore-index>
 </datastore-indexes>

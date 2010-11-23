@@ -42,8 +42,10 @@ public class UsuarioDAO extends DAOBase<Usuario> {
 	}
 
 	public Usuario recuperaPorLogin(String userId) {
-		Query query = getSession().createQuery("select from " + clazz.getName() + " where login :=login");
-		query.setParameter("login", userId);
+		
+		String strQuery = "select usuario from " + clazz.getName() + " usuario where usuario.login like :login";
+		Query query = getSession().createQuery(strQuery);
+		query.setParameter("login", userId + "%");
 		return (Usuario)query.getSingleResult();	
 	}
 

@@ -63,6 +63,7 @@ public abstract class DAOBase<T extends Entidade> {
 			
 		} catch(Exception ex) {
 			ex.printStackTrace();
+			getSession().getTransaction().rollback();
 			throw new RuntimeException("Erro ao salvar entidade");
 		}	finally {
 			getSession().close();

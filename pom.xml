@@ -17,7 +17,7 @@
           This is the App Engine SDK version.  It's used by the maven-gae-plugin.
           See http://code.google.com/p/maven-gae-plugin/ for additional configuration options.
         -->
-        <gae.version>1.3.1</gae.version>
+        <gae.version>1.3.7</gae.version>
 
         <!-- This path should contain the JDO @PersistenceCapable classes. -->
         <jpa.model.path>**/negocio/*.class</jpa.model.path>
@@ -94,6 +94,13 @@
         <dependency>
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-api-stubs</artifactId>
+            <version>${gae.version}</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-local-runtime</artifactId>
             <version>${gae.version}</version>
             <scope>test</scope>
         </dependency>

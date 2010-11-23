@@ -5,16 +5,24 @@ import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.PasswordTextField;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.Model;
+import org.apache.wicket.model.PropertyModel;
+
+import br.org.universa.negocio.Usuario;
+import br.org.universa.persistencia.UsuarioDAO;
 
 public class Login extends WebPage {
 
   private TextField<String> userIdField;
   private PasswordTextField passField;
   private Form<Object> form;
+  
+  private final Usuario usuario = new Usuario();
 
   public Login(){
-    userIdField = new TextField<String>("userId", new Model<String>(""));
-    passField = new PasswordTextField("password",new Model<String>(""));
+	  
+	  
+    userIdField = new TextField<String>("userId", new PropertyModel(usuario, "login"));
+    passField = new PasswordTextField("password", new PropertyModel(usuario, "senha"));
 
     //assegura que o password continuará preenchido após uma nova renderização da página
     passField.setResetPassword(false);
@@ -35,7 +43,14 @@ class LoginForm extends Form<Object> {
 	
 	@Override
 	public void onSubmit() {
-		setResponsePage(Menu.class);
+		UsuarioDAO dao = new UsuarioDAO();
+		Usuario usuarioRecuperado = dao.recuperaPorLogin(getUserId());
+		
+		if (usuarioRecuperado != null && getPassword().equals(usuarioRecuperado.getSenha())) {
+			setResponsePage(Menu.class);
+		} else {
+			info("Usuario ou senha inválidos");
+		}
 	}
 }
 

@@ -1,14 +1,15 @@
 package br.org.universa.negocio;
 
+import java.io.Serializable;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
-import org.apache.wicket.IClusterable;
 
 @MappedSuperclass
-public class Entidade implements IClusterable {
+public class Entidade implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	

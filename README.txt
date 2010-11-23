@@ -42,6 +42,9 @@ mvn gae:run
 11)para fazer o deploy:
 mvn gae:deploy
 
+12)para executar o console de administração de banco de dados no localhost do GAE:
+http://localhost:8080/_ah/admin
+
 12) LINKS:
 * Tortoisegit para windows - http://code.google.com/p/tortoisegit
 * Git para windows - http://code.google.com/p/msysgit/

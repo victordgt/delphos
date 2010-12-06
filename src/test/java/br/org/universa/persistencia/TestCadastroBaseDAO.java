@@ -4,7 +4,7 @@ import org.junit.Test;
 
 public class TestCadastroBaseDAO {
 	
-	private CadastroBaseDAO dao = new CadastroBaseDAO();
+//	private CadastroBaseDAO dao = new CadastroBaseDAO();
 	
 	@Test
 	public void testeIncluir()  {

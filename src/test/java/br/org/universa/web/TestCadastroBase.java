@@ -4,9 +4,6 @@ import org.apache.wicket.util.tester.FormTester;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Test;
 
-import br.org.universa.web.CadastroBasePage;
-import br.org.universa.web.Login;
-
 public class TestCadastroBase {
 	
 	private WicketTester tester = new WicketTester(Login.class);

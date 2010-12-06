@@ -17,7 +17,9 @@ import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.PropertyModel;
 
 import br.org.universa.negocio.CadastroBase;
-import br.org.universa.persistencia.CadastroBaseDAO;
+import br.org.universa.persistencia.DAO;
+
+import com.google.inject.Inject;
 
 
 
@@ -28,6 +30,9 @@ public class CadastroBasePage extends WebPage {
 	private FeedbackPanel feedback = new FeedbackPanel("feedback");
 	private CadastroBase cadastroBase = new CadastroBase();
 	private List<String> categorias = Arrays.asList(new String[]{"SOFTWARE", "HARDWARE"});
+	
+	@Inject
+	private DAO<CadastroBase> dao;
 
 
 	@SuppressWarnings("serial")
@@ -77,7 +82,6 @@ public class CadastroBasePage extends WebPage {
     		@Override
     		public void onSubmit() {
     			super.onSubmit();
-       			CadastroBaseDAO dao = new CadastroBaseDAO();
        			try {
        				dao.salvaOuAltera(cadastroBase);
       				setResponsePage(CadastroBasePage.class);

@@ -12,14 +12,19 @@ import org.apache.wicket.markup.repeater.data.DataView;
 import org.apache.wicket.markup.repeater.data.ListDataProvider;
 
 import br.org.universa.negocio.CadastroBase;
-import br.org.universa.persistencia.CadastroBaseDAO;
+import br.org.universa.persistencia.DAO;
+
+import com.google.inject.Inject;
 
 public class ListaBaseConhecimento extends WebPage {
+	
+	@Inject
+	private DAO<CadastroBase> dao;
 
 
 	public ListaBaseConhecimento() {
 
-		List<CadastroBase> cadastros = (List<CadastroBase>)new CadastroBaseDAO().recuperaTodos();
+		List<CadastroBase> cadastros = dao.recuperaTodos();
 	    DataView<CadastroBase> dataView = new DataView<CadastroBase>("lista", new ListDataProvider<CadastroBase>(cadastros), 5) {
 
 			private static final long serialVersionUID = 1L;
@@ -62,8 +67,7 @@ public class ListaBaseConhecimento extends WebPage {
 					private static final long serialVersionUID = 1L;
 
 					public void onClick() {
-						CadastroBaseDAO cadastroDao = new CadastroBaseDAO();
-						cadastroDao.exclui(cadastro);
+						dao.exclui(cadastro);
 						setResponsePage(ListaBaseConhecimento.class);
 					}
 

@@ -1,6 +1,7 @@
 package br.org.universa.negocio;
 
 import javax.persistence.Entity;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity(name="br.org.universa.negocio.Usuario")

@@ -1,74 +1,85 @@
 package br.org.universa.persistencia;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import javax.jdo.Transaction;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 
 import br.org.universa.negocio.Entidade;
 
-public abstract class DAOBase<T extends Entidade> {
-	 
-	private EntityManager em;
-	protected Class<T> clazz;
-	
-	public DAOBase(Class<T> clazz) {
+import com.google.inject.Provider;
+
+public abstract class DAOBase<T extends Entidade> implements DAO<T> {
+
+	private final Provider<EntityManager> emProvider;
+	protected final Class<T> clazz;
+
+	protected DAOBase(Class<T> clazz, Provider<EntityManager> emProvider) {
 		this.clazz = clazz;
-	}
-	
-	protected EntityManager getSession() {
-		if (em == null || !em.isOpen()) {
-			em = EMF.get().createEntityManager();
-		}
-	
-		return em;
+		this.emProvider = emProvider;
 	}
 
+	protected EntityManager getEntityManager() {
+		return emProvider.get();
+	}
+
+	@Override
 	public void exclui(T entidade) {
-		try {
-
-			getSession().getTransaction().begin();
-			
-			//como o objeto dado como parâmetro pode estar detached, então é necessário recuperar um objeto que esteja em uma sessão.
-			T entidadeManaged = getSession().find(clazz, entidade.getId());
-			getSession().remove(entidadeManaged);
-			getSession().getTransaction().commit();
-
-		} finally {
-			getSession().close();
-		}
+		// como o objeto dado como parâmetro pode estar detached, então é
+		// necessário recuperar um objeto que esteja em uma sessão.
+		T entidadeManaged = getEntityManager().find(clazz, entidade.getId());
+		getEntityManager().remove(entidadeManaged);
 	}
 
+	@Override
 	public T recupera(Long chave) {
 		T entidade = null;
-		try {
-			entidade = getSession().find(clazz, chave);
-		} finally {
-			getSession().close();
-		}
+		entidade = getEntityManager().find(clazz, chave);
 		return entidade;
 	}
-	
-	public abstract ArrayList<T> recuperar(boolean todos, int maximoResultados, int primeiroResultado);
-	
-	public ArrayList<T> recuperaTodos() {
-		//Recupera todos, os parametros com zero não fazem diferença
-		return recuperar(true, 0, 0);
+
+	@Override
+	public List<T> recuperaTodos() {
+		List<T> entidades = null;
+		entidades = new ArrayList<T>();
+		Query query = getEntityManager().createQuery(
+				"select from " + clazz.getName());
+		entidades.addAll(query.getResultList());
+		return entidades;
 	}
 
+	@Override
 	public void salvaOuAltera(T entidade) {
-		try {
-			getSession().getTransaction().begin();
-			getSession().persist(entidade);
-			getSession().getTransaction().commit();
-			
-		} catch(Exception ex) {
-			ex.printStackTrace();
-			getSession().getTransaction().rollback();
-			throw new RuntimeException("Erro ao salvar entidade");
-		}	finally {
-			getSession().close();
-		}
-		
+		getEntityManager().persist(entidade);
 	}
+
+	@Override
+	public T recuperaPorValorAtributo(Object valorAtributo) {
+		Query query = getEntityManager().createQuery(getQueryValorAtributos());
+		T entidade = (T) query.getSingleResult();
+		return entidade;
+	}
+
+	protected String getQueryValorAtributos() {
+		return "select usuario from " + clazz.getName();
+	}
+
+	
+	public void runInTransaction(Runnable block) {
+		EntityTransaction tx = emProvider.get().getTransaction();
+		try {
+			tx.begin();
+			block.run();
+			tx.commit();
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+		}
+	}
+	
 
 }

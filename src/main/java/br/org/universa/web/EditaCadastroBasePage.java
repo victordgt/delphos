@@ -19,9 +19,9 @@ import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.PropertyModel;
 
 import br.org.universa.negocio.CadastroBase;
-import br.org.universa.persistencia.CadastroBaseDAO;
+import br.org.universa.persistencia.DAO;
 
-
+import com.google.inject.Inject;
 
 public class EditaCadastroBasePage extends WebPage {
 	
@@ -30,6 +30,10 @@ public class EditaCadastroBasePage extends WebPage {
 	private FeedbackPanel feedback = new FeedbackPanel("feedback");
 	private final CadastroBase cadastroBase;
 	private List<String> categorias = Arrays.asList(new String[]{"SOFTWARE", "HARDWARE"});
+	
+	@Inject
+	private DAO<CadastroBase> dao;
+	
 
 	@SuppressWarnings("serial")
 	public EditaCadastroBasePage(CadastroBase cadastroBase) {
@@ -83,7 +87,6 @@ public class EditaCadastroBasePage extends WebPage {
     			
     			CadastroBase cadastroBase = (CadastroBase)getForm().getModelObject();
     			super.onSubmit();
-       			CadastroBaseDAO dao = new CadastroBaseDAO();
        			try {
        				dao.salvaOuAltera(cadastroBase);
       				setResponsePage(ListaBaseConhecimento.class);

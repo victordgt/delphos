@@ -3,7 +3,6 @@ package br.org.universa.persistencia;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-import javax.jdo.PersistenceManager;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.servlet.Filter;

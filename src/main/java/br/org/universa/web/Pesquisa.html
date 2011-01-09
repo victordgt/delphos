@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="Resources/axurerppage.css" type="text/css" rel="stylesheet">
+
+</HEAD>
+
+<BODY>
+
+<FORM wicket:id="pesquisa">
+<fieldset>
+<legend>
+<span style="font-family: 'Arial'; color: #000000; font-size: 13px;"><b>Entre com o T&iacute;tulo do Problema para pesquisa</b></span>
+</legend>
+<INPUT id=u4 wicket:id="titulo" type=text value="" style="background-color: #FFFFFF; text-align: left; font-family: 'Arial'; font-size: 13px; color: #000000; font-style: normal; font-weight: normal; text-decoration: none">
+<INPUT id=u5 wicket:id="botao_pesquisa_titulo" type=submit value="Pesquisar T&iacute;tulo" style="text-align: center; font-family: 'Arial'; font-size: 13px; color: #000000; font-style: normal; font-weight: normal; text-decoration: none">
+</fieldset>
+
+<fieldset>
+<legend>
+<span style="font-family: 'Arial'; color: #000000; font-size: 13px;"><b>Entre com palavras chaves para pesquisa</b></span> </legend> 
+<INPUT id=u8 wicket:id="tag" type=text style="background-color: #FFFFFF; text-align: left; font-family: 'Arial'; font-size: 13px; color: #000000; font-style: normal; font-weight: normal; text-decoration: none">
+<INPUT id=u7 wicket:id="botao_pesquisa_tag" type=submit value="Pesquisa por chaves" style="text-align: center; font-family: 'Arial'; font-size: 13px; color: #000000; font-style: normal; font-weight: normal; text-decoration: none">
+</fieldset>
+
+</FORM>
+
+<DIV wicket:id="container" >
+<table border="2" cellpadding="1" class="dataview">
+	<tr>
+		<th bgcolor="#99CCFF">Nome</th>
+		<th bgcolor="#99CCFF">Categoria</th>
+		<th bgcolor="#99CCFF">Vers&atilde;o</th>
+		<th bgcolor="#99CCFF">Descri&ccedil;&atilde;o</th>
+		<th bgcolor="#99CCFF">&nbsp;</th>
+		<th bgcolor="#99CCFF">&nbsp;</th>
+	</tr>
+	<tr wicket:id="lista">
+		<td><span wicket:id="nome">[fake nome]</span></td>
+		<td><span wicket:id="categoria">[fake categoria]</span></td>
+		<td><span wicket:id="versao">[fake versao]</span></td>
+		<td><span wicket:id="descricao">[fake descricao]</span></td>
+		<td><a wicket:id="editar" href="#"><img
+			src="imagens/icone_alterar.png"></img></a></td>
+		<td><a wicket:id="remover" href="#"><img
+			src="imagens/icone_remover.png"></img></a></td>
+	</tr>
+</table>
+<p><span wicket:id="navigator" /></p>
+</DIV>
+
+
+
+
+<span style="font-family: 'Arial'; color: #0000FF; font-size: 15px;"><a
+	wicket:id="menu">Voltar para o menu</a></span>
+
+
+</BODY>
+
+</HTML>

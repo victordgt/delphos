@@ -10,7 +10,7 @@ public class TestCadastroBase {
 	
 	@Test
 	public void testCadastrarForm() {	
-		tester.startPage(CadastroBasePage.class);
+		tester.startPage(InsereSolucaoTI.class);
 		
 		FormTester form = tester.newFormTester("form");
 		form.setValue("titulo", "titulo");
@@ -21,7 +21,7 @@ public class TestCadastroBase {
 		form.submit();
 		
 		//TODO Verificar a mensagem do Feedbackpanel para ver ser cadastrou com sucesso
-		tester.assertRenderedPage(CadastroBasePage.class);
+		tester.assertRenderedPage(InsereSolucaoTI.class);
     			
 	}
 	

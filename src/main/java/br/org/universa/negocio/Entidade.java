@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
+import com.google.appengine.api.datastore.Key;
+
 
 @MappedSuperclass
 public class Entidade implements Serializable {
@@ -15,13 +17,13 @@ public class Entidade implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Key id;
 
-	public void setId(Long id) {
+	public void setId(Key id) {
 		this.id = id;
 	}
 
-	public Long getId() {
+	public Key getId() {
 		return id;
 	}
 	

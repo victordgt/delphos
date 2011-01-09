@@ -3,7 +3,6 @@ package br.org.universa.persistencia;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.jdo.Transaction;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
@@ -22,7 +21,7 @@ public abstract class DAOBase<T extends Entidade> implements DAO<T> {
 		this.emProvider = emProvider;
 	}
 
-	protected EntityManager getEntityManager() {
+	public EntityManager getEntityManager() {
 		return emProvider.get();
 	}
 
@@ -42,6 +41,7 @@ public abstract class DAOBase<T extends Entidade> implements DAO<T> {
 	}
 
 	@Override
+	@SuppressWarnings("unchecked")
 	public List<T> recuperaTodos() {
 		List<T> entidades = null;
 		entidades = new ArrayList<T>();
@@ -57,6 +57,7 @@ public abstract class DAOBase<T extends Entidade> implements DAO<T> {
 	}
 
 	@Override
+	@SuppressWarnings("unchecked")
 	public T recuperaPorValorAtributo(Object valorAtributo) {
 		Query query = getEntityManager().createQuery(getQueryValorAtributos());
 		T entidade = (T) query.getSingleResult();

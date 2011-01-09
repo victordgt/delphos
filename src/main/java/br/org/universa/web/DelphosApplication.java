@@ -10,9 +10,9 @@ import br.org.universa.guice.GuiceModule;
 public class DelphosApplication extends WebApplication {
 
 	
-	public Class<Login> getHomePage()
+	public Class<Menu> getHomePage()
     {
-        return Login.class;
+        return Menu.class;
     }	
 	
 
@@ -23,7 +23,10 @@ public class DelphosApplication extends WebApplication {
 
         // configuração padrãop para o Google App Engine
         getResourceSettings().setResourcePollFrequency(null);
-
+        
+        mountBookmarkablePage("cadastroSolucao", InsereSolucaoTI.class);
+        mountBookmarkablePage("login", Login.class);
+        
         // Enable Guice for field injection on Wicket pages.  Unfortunately, constructor injection into
         // pages is not supported.  Supplying ServletModule is optional; it enables usage of @RequestScoped and
         // @SessionScoped, which may not be useful for Wicket applications because the WebPage instances are

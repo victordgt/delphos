@@ -9,11 +9,11 @@ import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.PropertyModel;
 
 import br.org.universa.negocio.Usuario;
-import br.org.universa.persistencia.DAO;
+import br.org.universa.negocio.controller.UsuarioBC;
 
 import com.google.inject.Inject;
 
-public class Login extends WebPage {
+public class Login extends BasePage {
 
 	private TextField<String> userIdField;
 	private PasswordTextField passField;
@@ -21,7 +21,7 @@ public class Login extends WebPage {
 	private final FeedbackPanel feedback = new FeedbackPanel("feedback");
 
 	@Inject
-	private DAO<Usuario> dao;
+	private UsuarioBC usuarioBC;
 
 	private final Usuario usuario = new Usuario();
 
@@ -55,12 +55,9 @@ public class Login extends WebPage {
 		public void onSubmit() {
 			super.onSubmit();
 
-			//dao.salvaOuAltera(usuario); // para cadastrar um usuário do banco
-			Usuario usuarioRecuperado = dao
-					.recuperaPorValorAtributo(getUserId());
+			boolean autenticado = usuarioBC.login(getUserId(), getPassword());
 
-			if (usuarioRecuperado != null
-					&& getPassword().equals(usuarioRecuperado.getSenha())) {
+			if (autenticado) {
 				setResponsePage(Menu.class);
 			} else {
 				feedback.setVisible(true);

@@ -1,10 +1,14 @@
 package br.org.universa.guice;
 
-import br.org.universa.negocio.CadastroBase;
+import br.org.universa.negocio.SolucaoTI;
+import br.org.universa.negocio.Tag;
 import br.org.universa.negocio.Usuario;
-import br.org.universa.persistencia.CadastroBaseDAO;
+import br.org.universa.negocio.controller.SolucaoTIBC;
+import br.org.universa.negocio.controller.UsuarioBC;
 import br.org.universa.persistencia.DAO;
 import br.org.universa.persistencia.EntityManagerFilter;
+import br.org.universa.persistencia.SolucaoTIDAO;
+import br.org.universa.persistencia.TagDAO;
 import br.org.universa.persistencia.UsuarioDAO;
 
 import com.google.inject.AbstractModule;
@@ -21,9 +25,16 @@ public class GuiceModule extends AbstractModule
          //Enable per-request-thread EntityManager injection.
         install(new EntityManagerFilter.GuiceModule());
 
-        // Business object bindings go here.
-        bind(new TypeLiteral<DAO<CadastroBase>>() { }).to(CadastroBaseDAO.class);
+        // DAO`s
+        bind(new TypeLiteral<DAO<SolucaoTI>>() { }).to(SolucaoTIDAO.class);
         bind(new TypeLiteral<DAO<Usuario>>() { }).to(UsuarioDAO.class);
+        bind(new TypeLiteral<DAO<Tag>>() { }).to(TagDAO.class);
+        
+        bind(SolucaoTIBC.class);
+            
+        // Business Controllers
+        bind(UsuarioBC.class);
+        bind(SolucaoTI.class);
         
     }
 }

@@ -24,6 +24,7 @@ public class UsuarioDAO extends DAOBase<Usuario> {
 
     @Override
 	public Usuario recuperaPorValorAtributo(Object valorAtributo) {
+    	log.info("Recupera por login o usuário: " + valorAtributo);
 		Query query = getEntityManager().createQuery(getQueryValorAtributos());
 		query.setParameter("login", valorAtributo + "%");
 		Object usuario = null;
